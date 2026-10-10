@@ -66,16 +66,21 @@ strong { font-weight: 500; color: var(--texto); }
     position: fixed; top: 0; left: 0; right: 0; z-index: 50;
     display: flex; align-items: center; justify-content: space-between;
     padding: 26px max(var(--gutter), env(safe-area-inset-right)) 26px max(var(--gutter), env(safe-area-inset-left));
-    transition: padding .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease);
+    transition: padding .4s var(--ease), border-color .4s var(--ease);
     border-bottom: 1px solid transparent;
 }
-.topo--rolado {
-    padding-block: 16px;
+.topo::before {
+    /* Fundo desfocado num pseudo-elemento: backdrop-filter no próprio .topo
+       prenderia o menu mobile (position: fixed) dentro da altura do cabeçalho */
+    content: ""; position: absolute; inset: 0; z-index: -1;
     background: rgba(10, 16, 18, .78);
     backdrop-filter: blur(14px) saturate(140%);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
-    border-color: var(--linha);
+    opacity: 0; transition: opacity .4s var(--ease);
 }
+.topo--rolado { padding-block: 16px; border-color: var(--linha); }
+.topo--rolado::before { opacity: 1; }
+.topo__marca, .topo__menu { position: relative; z-index: 2; }
 .topo__marca { font-family: var(--serif); font-size: 28px; font-weight: 600; letter-spacing: .02em; }
 .topo__marca span { color: var(--dourado); }
 .topo__nav { display: flex; align-items: center; gap: 36px; font-size: 14px; letter-spacing: .04em; }
@@ -318,11 +323,14 @@ code { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: .88
     .topo--aberto .topo__menu span:last-child { transform: translateY(-4px) rotate(-45deg); }
     .topo__nav {
         position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 28px;
-        background: rgba(10, 16, 18, .97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+        background: radial-gradient(120% 60% at 100% 0%, rgba(47, 111, 106, .22), transparent 60%), var(--fundo);
         font-family: var(--serif); font-size: 34px;
         opacity: 0; visibility: hidden; transition: opacity .45s var(--ease), visibility .45s;
     }
     .topo--aberto .topo__nav { opacity: 1; visibility: visible; }
+    .topo--aberto { border-color: transparent; }
+    .topo--aberto::before { opacity: 0; }
+    .topo__nav a { color: var(--texto); }
     .topo__nav .topo__cta { font-family: var(--sans); font-size: 15px; margin-top: 12px; }
 
     .hero { grid-template-columns: 1fr; padding-top: 120px; gap: 56px; text-align: left; }
