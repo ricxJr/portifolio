@@ -3,47 +3,215 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
-    <link rel="stylesheet" href="./assets/style/reset.css">
+    <title>Ricardo Junior — Full-Stack Developer</title>
+    <meta name="description" content="Ricardo Junior — Desenvolvedor Full-Stack com foco em React, TypeScript, Java e automação de workflows de desenvolvimento.">
+    <meta name="theme-color" content="#0a1012">
+    <meta property="og:title" content="Ricardo Junior — Full-Stack Developer">
+    <meta property="og:description" content="React, TypeScript, Java e automação de workflows de desenvolvimento.">
+    <meta property="og:image" content="./assets/img/ricardo.jpg">
+    <link rel="icon" href="./assets/img/ricardo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="./assets/style/style.css">
-    
 </head>
 
 <body>
-    <header class="cabecalho">
-            <button class="cabecalho__menu" aria-label="Menu"><i></i></button>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+
+    <header class="topo" id="topo">
+        <a href="#inicio" class="topo__marca">RJ<span>.</span></a>
+        <button class="topo__menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao">
+            <span></span><span></span>
+        </button>
+        <nav class="topo__nav" id="navegacao">
+            <a href="#sobre">Sobre</a>
+            <a href="#trajetoria">Trajetória</a>
+            <a href="#stack">Stack</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato" class="topo__cta">Contato</a>
+        </nav>
     </header>
-    <nav class="menu-lateral">
-        <a href="index.html" class="menu-lateral__link menu-lateral__link--home menu-lateral__link menu-lateral__link--ativo">Home</a>
-        <a href="sobremim.html" class="menu-lateral__link menu-lateral__link--sobremim">Sobre Mim</a>
-        <a href="projetos.html" class="menu-lateral__link menu-lateral__link--projetos "> Meus Projetos</a>
-    </nav>
-    <main class="apresentacao">
-        <section class="apresentacao__section" >
-            <div class="apresentacao__conteudo">
-                <h1 class="apresentacao__conteudo__titulo">Ricardo Alves dos Santos Junior<strong 
-                class="titulo-destaque"> Desenvolvedor full-Stack!
-                </strong></h1>
-                
-                <p class="apresentacao__conteudo__texto">As linguagens que tenho domínio são Python, Java, JavaScript, CSS, HTML, SQL. </p>
-                <p class="apresentacao__conteudo__texto">Também sei usar alguns frameworks como React, Angular, Next.js, Vue.js e Bootstrap.</p>
-                <div class="apresentacao__links" id="btnRedesSociais">
-                    <h2 class="apresentacao__links__subtitulo">Acesse Minhas Redes:</h2>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero__texto">
+                <p class="rotulo revelar">Full-Stack Developer</p>
+                <h1 class="hero__titulo revelar">
+                    Ricardo<br><em>Junior</em>
+                </h1>
+                <p class="hero__lead revelar">
+                    Construo soluções front-end e back-end com foco em produtividade,
+                    padronização, qualidade de código e experiência do desenvolvedor.
+                </p>
+                <div class="hero__acoes revelar">
+                    <a href="#projetos" class="botao botao--primario">Ver projetos</a>
+                    <a href="https://www.linkedin.com/in/ricxjr" target="_blank" rel="noopener" class="botao botao--linha">LinkedIn</a>
+                </div>
+            </div>
+            <figure class="hero__foto revelar">
+                <div class="hero__moldura">
+                    <img src="./assets/img/ricardo.jpg" alt="Retrato de Ricardo Junior" width="460" height="460">
+                </div>
+                <figcaption class="hero__selo">
+                    <span class="hero__ponto"></span>
+                    React · TypeScript · Java
+                </figcaption>
+            </figure>
+            <a href="#sobre" class="hero__rolar" aria-label="Rolar para Sobre"><span></span></a>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="secao" id="sobre">
+            <div class="secao__cabeca revelar">
+                <span class="secao__num">01</span>
+                <h2 class="secao__titulo">Sobre</h2>
+            </div>
+            <div class="sobre">
+                <p class="sobre__destaque revelar">
+                    Da precisão da usinagem CNC à engenharia de software —
+                    uma carreira construída sobre <em>lógica, rigor e atenção ao detalhe</em>.
+                </p>
+                <div class="sobre__texto revelar">
+                    <p>
+                        Sou Tecnólogo em Desenvolvimento Full-Stack, com pós-graduação em Engenharia de Software.
+                        Atuo no desenvolvimento de soluções front-end e back-end, buscando sempre construir
+                        soluções práticas, escaláveis e bem estruturadas.
+                    </p>
+                    <p>
+                        Tenho interesse especial em <strong>tooling</strong>, <strong>integrações</strong>,
+                        <strong>arquitetura de projetos</strong> e na otimização de fluxos de trabalho —
+                        ferramentas que tornam o dia a dia de outros desenvolvedores mais rápido e confiável.
+                    </p>
+                    <p>
+                        Antes do software, trabalhei com automação industrial e programação CNC.
+                        Essa base me deu disciplina de processo e um olhar cuidadoso para qualidade,
+                        que levo para cada linha de código.
+                    </p>
+                </div>
+                <dl class="numeros revelar">
+                    <div><dt>Formação</dt><dd>Tecnólogo Full-Stack</dd></div>
+                    <div><dt>Especialização</dt><dd>Eng. de Software</dd></div>
+                    <div><dt>Repositórios</dt><dd>35+ públicos</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- TRAJETÓRIA -->
+        <section class="secao" id="trajetoria">
+            <div class="secao__cabeca revelar">
+                <span class="secao__num">02</span>
+                <h2 class="secao__titulo">Trajetória</h2>
+            </div>
+            <ol class="linha">
+                <li class="linha__item revelar">
+                    <span class="linha__quando">Atual</span>
+                    <div>
+                        <h3>Full-Stack Developer <span>· Consistem</span></h3>
+                        <p>Desenvolvimento front-end e back-end com React, TypeScript, Java e InterSystems ObjectScript.
+                            Contribuições em tooling de desenvolvimento, como a extensão
+                            <a href="https://github.com/consistem/vscode-objectscript" target="_blank" rel="noopener">vscode-objectscript</a>,
+                            e automação de workflows com Git e SVN.</p>
+                    </div>
+                </li>
+                <li class="linha__item revelar">
+                    <span class="linha__quando">Pós-graduação</span>
+                    <div>
+                        <h3>Engenharia de Software</h3>
+                        <p>Arquitetura, qualidade e processos de desenvolvimento de software.</p>
+                    </div>
+                </li>
+                <li class="linha__item revelar">
+                    <span class="linha__quando">Graduação</span>
+                    <div>
+                        <h3>Tecnólogo em Desenvolvimento Full-Stack <span>· Estácio</span></h3>
+                        <p>Projetos em Python, Java (POO, JDBC, Jakarta EE, sockets), JavaScript e bancos de dados relacionais.</p>
+                    </div>
+                </li>
+                <li class="linha__item revelar">
+                    <span class="linha__quando">Indústria</span>
+                    <div>
+                        <h3>Usinagem CNC &amp; Automação</h3>
+                        <p>Execução e depuração de programas CNC em centros de usinagem, programação de CLPs
+                            e, ainda no ensino médio, um braço robótico em C++.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- STACK -->
+        <section class="secao" id="stack">
+            <div class="secao__cabeca revelar">
+                <span class="secao__num">03</span>
+                <h2 class="secao__titulo">Stack</h2>
+            </div>
+            <div class="stack">
+                <div class="stack__grupo revelar">
+                    <h3>Front-end</h3>
+                    <ul><li>React</li><li>TypeScript</li><li>JavaScript</li><li>Angular</li><li>HTML &amp; CSS</li></ul>
+                </div>
+                <div class="stack__grupo revelar">
+                    <h3>Back-end</h3>
+                    <ul><li>Java</li><li>InterSystems ObjectScript</li><li>Python</li><li>Node.js</li><li>SQL</li></ul>
+                </div>
+                <div class="stack__grupo revelar">
+                    <h3>Tooling &amp; Desktop</h3>
+                    <ul><li>VS Code Extensions</li><li>Tauri</li><li>Monaco Editor</li><li>Automação de workflows</li></ul>
+                </div>
+                <div class="stack__grupo revelar">
+                    <h3>Versionamento</h3>
+                    <ul><li>Git</li><li>GitHub</li><li>SVN</li></ul>
                 </div>
             </div>
         </section>
-        <img class="apresentacao__imagem" src="./assets/img/Imagem.png" alt="Foto do Ricardo Alves dos Santos Junior programando">
-    </main>
-    <footer class="rodape__footer">
-        <div class="rodape">
-            <p >Desenvolvido pelo Ricardo.</p>
-        </div>
-    </footer>
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/menuLateral.js"></script>
-</body>
 
+        <!-- PROJETOS -->
+        <section class="secao" id="projetos">
+            <div class="secao__cabeca revelar">
+                <span class="secao__num">04</span>
+                <h2 class="secao__titulo">Projetos</h2>
+            </div>
+
+            <article class="destaque revelar">
+                <a class="destaque__imagem" href="https://github.com/ricxJr/conflicts" target="_blank" rel="noopener">
+                    <img src="./assets/img/mergescope.jpg" alt="Interface do MergeScope com três painéis de diff" loading="lazy">
+                </a>
+                <div class="destaque__texto">
+                    <p class="rotulo">Projeto em destaque</p>
+                    <h3>MergeScope</h3>
+                    <p>Resolução visual de conflitos de merge no Git comparando cada lado com o ancestral comum.
+                        App desktop com diffs sincronizados, classificação de conflitos, aplicação automática de mudanças
+                        seguras e integração com <code>git mergetool</code>.</p>
+                    <ul class="tags"><li>Tauri 2</li><li>React</li><li>TypeScript</li><li>Monaco</li></ul>
+                    <a class="link-seta" href="https://github.com/ricxJr/conflicts" target="_blank" rel="noopener">Ver repositório</a>
+                </div>
+            </article>
+
+            <div class="grade" id="gradeProjetos"></div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contato" id="contato">
+            <p class="rotulo revelar">Contato</p>
+            <h2 class="contato__titulo revelar">Vamos construir<br><em>algo bem feito.</em></h2>
+            <p class="contato__texto revelar">Aberto a conversas sobre tecnologia, projetos e oportunidades.</p>
+            <div class="contato__links revelar">
+                <a href="https://www.linkedin.com/in/ricxjr" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/ricxJr" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://drive.google.com/drive/folders/1aiVKjE6eeR2KHjMo3IoDiliMJaKAk1oN?usp=drive_link" target="_blank" rel="noopener">Certificados</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <span>© <span id="ano"></span> Ricardo Junior</span>
+        <a href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
 
 </html>
