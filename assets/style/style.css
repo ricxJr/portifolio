@@ -99,6 +99,23 @@ strong { font-weight: 500; color: var(--texto); }
 .topo__nav .topo__cta::after { display: none; }
 .topo__nav .topo__cta:hover { border-color: var(--dourado); background: var(--dourado); color: var(--fundo); }
 .topo__menu { display: none; }
+.topo__nav { margin-left: auto; }
+
+/* Seletor de idioma */
+.idioma {
+    position: relative; z-index: 2;
+    display: inline-flex; margin-left: 28px; padding: 3px;
+    border: 1px solid var(--linha-forte); border-radius: 999px;
+}
+.idioma button {
+    min-width: 40px; height: 32px; padding: 0 10px; border: 0; border-radius: 999px;
+    background: none; color: var(--texto-3); cursor: pointer;
+    font: 500 12px/1 var(--sans); letter-spacing: .12em;
+    transition: background .35s var(--ease), color .35s var(--ease);
+}
+.idioma button:hover { color: var(--texto); }
+.idioma button[aria-pressed="true"] { background: var(--dourado); color: var(--fundo); }
+.idioma button:focus-visible, .topo__menu:focus-visible { outline: 1px solid var(--dourado); outline-offset: 2px; }
 
 /* Botões */
 .botao {
@@ -313,8 +330,10 @@ code { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: .88
     .topo__menu {
         display: grid; place-content: center; gap: 7px;
         width: 44px; height: 44px; background: none; border: 1px solid var(--linha-forte); border-radius: 50%;
-        cursor: pointer; z-index: 2;
+        cursor: pointer; z-index: 2; margin-left: 10px; flex-shrink: 0;
     }
+    .idioma { margin-left: auto; }
+    .idioma button { height: 36px; }
     .topo__menu span { display: block; width: 18px; height: 1px; background: var(--texto); transition: transform .4s var(--ease); }
     .topo--aberto .topo__menu span:first-child { transform: translateY(4px) rotate(45deg); }
     .topo--aberto .topo__menu span:last-child { transform: translateY(-4px) rotate(-45deg); }

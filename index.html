@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricardo Junior — Full-Stack Developer</title>
-    <meta name="description" content="Ricardo Junior — Desenvolvedor Full-Stack focado em arquitetura de software para SaaS, ERP e Inteligência Artificial, com bancos vetoriais, RAG e MCP.">
+    <meta name="description" data-i18n-content="meta.desc" content="Ricardo Junior — Full-Stack Developer focused on software architecture for SaaS, ERP and Artificial Intelligence, with vector databases, RAG and MCP.">
     <meta name="theme-color" content="#0a1012">
     <meta property="og:title" content="Ricardo Junior — Full-Stack Developer">
-    <meta property="og:description" content="Arquitetura de software para SaaS, ERP e Inteligência Artificial.">
+    <meta property="og:description" content="Software architecture for SaaS, ERP and Artificial Intelligence.">
     <meta property="og:image" content="./assets/img/ricardo.jpg">
     <link rel="icon" href="./assets/img/ricardo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="alternate" hreflang="en" href="./?lang=en">
+    <link rel="alternate" hreflang="pt-BR" href="./?lang=pt">
 </head>
 
 <body>
@@ -23,83 +25,87 @@
 
     <header class="topo" id="topo">
         <a href="#inicio" class="topo__marca">RJ<span>.</span></a>
-        <button class="topo__menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao">
+        <nav class="topo__nav" id="navegacao">
+            <a href="#sobre" data-i18n="nav.about">About</a>
+            <a href="#trajetoria" data-i18n="nav.exp">Experience</a>
+            <a href="#stack">Stack</a>
+            <a href="#projetos" data-i18n="nav.projects">Projects</a>
+            <a href="#contato" class="topo__cta" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="idioma" role="group" aria-label="Language / Idioma">
+            <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+            <button type="button" data-lang="pt" aria-pressed="false" lang="pt-BR">PT</button>
+        </div>
+        <button class="topo__menu" aria-label="Open menu" aria-expanded="false" aria-controls="navegacao">
             <span></span><span></span>
         </button>
-        <nav class="topo__nav" id="navegacao">
-            <a href="#sobre">Sobre</a>
-            <a href="#trajetoria">Trajetória</a>
-            <a href="#stack">Stack</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato" class="topo__cta">Contato</a>
-        </nav>
     </header>
 
     <main>
         <!-- HERO -->
         <section class="hero" id="inicio">
             <div class="hero__texto">
-                <p class="rotulo revelar">Full-Stack · Arquitetura</p>
+                <p class="rotulo revelar" data-i18n="hero.label">Full-Stack · Architecture</p>
                 <h1 class="hero__titulo revelar">
                     Ricardo<br><em>Junior</em>
                 </h1>
-                <p class="hero__lead revelar">
-                    Arquitetura de software para <strong>SaaS</strong>, <strong>ERP</strong> e
-                    <strong>Inteligência Artificial</strong>, atuando em projetos reais — de sistemas
-                    escaláveis a soluções com bancos vetoriais, RAG e MCP.
+                <p class="hero__lead revelar" data-i18n="hero.lead">
+                    Software architecture for <strong>SaaS</strong>, <strong>ERP</strong> and
+                    <strong>Artificial Intelligence</strong>, working on real-world projects — from scalable
+                    systems to solutions built on vector databases, RAG and MCP.
                 </p>
                 <div class="hero__acoes revelar">
-                    <a href="#projetos" class="botao botao--primario">Ver projetos</a>
+                    <a href="#projetos" class="botao botao--primario" data-i18n="hero.cta">View projects</a>
                     <a href="https://www.linkedin.com/in/ricxjr" target="_blank" rel="noopener" class="botao botao--linha">LinkedIn</a>
                 </div>
             </div>
             <figure class="hero__foto revelar">
                 <div class="hero__moldura">
-                    <img src="./assets/img/ricardo.jpg" alt="Retrato de Ricardo Junior" width="460" height="460">
+                    <img src="./assets/img/ricardo.jpg" alt="Portrait of Ricardo Junior" data-i18n-alt="photo.alt" width="460" height="460">
                 </div>
-                <figcaption class="hero__selo">
+                <figcaption class="hero__selo" data-i18n="hero.badge">
                     <span class="hero__ponto"></span>
-                    SaaS · ERP · IA
+                    SaaS · ERP · AI
                 </figcaption>
             </figure>
-            <a href="#sobre" class="hero__rolar" aria-label="Rolar para Sobre"><span></span></a>
+            <a href="#sobre" class="hero__rolar" aria-label="Scroll to About" data-i18n-aria="scroll.aria"><span></span></a>
         </section>
 
         <!-- SOBRE -->
         <section class="secao" id="sobre">
             <div class="secao__cabeca revelar">
                 <span class="secao__num">01</span>
-                <h2 class="secao__titulo">Sobre</h2>
+                <h2 class="secao__titulo" data-i18n="sec.about">About</h2>
             </div>
             <div class="sobre">
-                <p class="sobre__destaque revelar">
-                    Da precisão da usinagem CNC à engenharia de software —
-                    uma carreira construída sobre <em>lógica, rigor e atenção ao detalhe</em>.
+                <p class="sobre__destaque revelar" data-i18n="about.quote">
+                    From the precision of CNC machining to software engineering —
+                    a career built on <em>logic, rigor and attention to detail</em>.
                 </p>
                 <div class="sobre__texto revelar">
-                    <p>
-                        Sou Tecnólogo em Desenvolvimento Full-Stack, com pós-graduação em Engenharia de Software.
-                        Atuo de ponta a ponta, do front-end ao back-end, e hoje meu foco está na
-                        <strong>arquitetura de software</strong>: desenhar sistemas escaláveis, bem estruturados
-                        e preparados para evoluir.
+                    <p data-i18n="about.p1">
+                        I hold a degree in Full-Stack Development and a postgraduate degree in Software Engineering.
+                        I work end to end, from front-end to back-end, and my focus today is
+                        <strong>software architecture</strong>: designing systems that are scalable, well structured
+                        and built to evolve.
                     </p>
-                    <p>
-                        Hoje atuo em <strong>projetos reais</strong> envolvendo <strong>plataformas SaaS</strong>,
-                        <strong>sistemas ERP</strong> e <strong>Inteligência Artificial aplicada</strong> —
-                        LLMs, agentes, RAG com <strong>bancos vetoriais</strong> e integrações via
-                        <strong>MCP (Model Context Protocol)</strong> que conectam a IA aos dados e
-                        processos do negócio.
+                    <p data-i18n="about.p2">
+                        I currently work on <strong>real-world projects</strong> involving <strong>SaaS platforms</strong>,
+                        <strong>ERP systems</strong> and <strong>applied Artificial Intelligence</strong> —
+                        LLMs, agents, RAG with <strong>vector databases</strong> and integrations through the
+                        <strong>MCP (Model Context Protocol)</strong> that connect AI to business data
+                        and processes.
                     </p>
-                    <p>
-                        Antes do software, trabalhei com automação industrial e programação CNC.
-                        Essa base me deu disciplina de processo e um olhar cuidadoso para qualidade,
-                        que levo para cada linha de código.
+                    <p data-i18n="about.p3">
+                        Before software, I worked in industrial automation and CNC programming.
+                        That background gave me process discipline and a careful eye for quality,
+                        which I bring to every line of code.
                     </p>
                 </div>
                 <dl class="numeros revelar">
-                    <div><dt>Formação</dt><dd>Tecnólogo Full-Stack</dd></div>
-                    <div><dt>Especialização</dt><dd>Eng. de Software</dd></div>
-                    <div><dt>Foco atual</dt><dd>SaaS · ERP · IA</dd></div>
+                    <div><dt data-i18n="stat.degree">Degree</dt><dd data-i18n="stat.degreeV">Full-Stack Development</dd></div>
+                    <div><dt data-i18n="stat.post">Postgraduate</dt><dd data-i18n="stat.postV">Software Engineering</dd></div>
+                    <div><dt data-i18n="stat.focus">Current focus</dt><dd data-i18n="stat.focusV">SaaS · ERP · AI</dd></div>
                 </dl>
             </div>
         </section>
@@ -108,41 +114,41 @@
         <section class="secao" id="trajetoria">
             <div class="secao__cabeca revelar">
                 <span class="secao__num">02</span>
-                <h2 class="secao__titulo">Trajetória</h2>
+                <h2 class="secao__titulo" data-i18n="sec.exp">Experience</h2>
             </div>
             <ol class="linha">
                 <li class="linha__item revelar">
-                    <span class="linha__quando">Atual</span>
+                    <span class="linha__quando" data-i18n="exp.now">Current</span>
                     <div>
                         <h3>Full-Stack Developer <span>· Consistem</span></h3>
-                        <p>Desenvolvimento de ERP com React, TypeScript, Java e InterSystems ObjectScript,
-                            atuando em projetos reais de arquitetura e de integração com Inteligência Artificial
-                            — bancos vetoriais, RAG e servidores MCP.
-                            Contribuições em tooling de desenvolvimento, como a extensão
-                            <a href="https://github.com/consistem/vscode-objectscript" target="_blank" rel="noopener">vscode-objectscript</a>,
-                            e automação de workflows com Git e SVN.</p>
+                        <p data-i18n="exp.c.p">ERP development with React, TypeScript, Java and InterSystems ObjectScript,
+                            working on real-world projects in architecture and Artificial Intelligence integration
+                            — vector databases, RAG and MCP servers.
+                            Contributions to developer tooling, such as the
+                            <a href="https://github.com/consistem/vscode-objectscript" target="_blank" rel="noopener">vscode-objectscript</a>
+                            extension, and workflow automation with Git and SVN.</p>
                     </div>
                 </li>
                 <li class="linha__item revelar">
-                    <span class="linha__quando">Pós-graduação</span>
+                    <span class="linha__quando" data-i18n="exp.post">Postgraduate</span>
                     <div>
-                        <h3>Engenharia de Software</h3>
-                        <p>Arquitetura, qualidade e processos de desenvolvimento de software.</p>
+                        <h3 data-i18n="exp.post.h">Software Engineering</h3>
+                        <p data-i18n="exp.post.p">Architecture, quality and software development processes.</p>
                     </div>
                 </li>
                 <li class="linha__item revelar">
-                    <span class="linha__quando">Graduação</span>
+                    <span class="linha__quando" data-i18n="exp.grad">Degree</span>
                     <div>
-                        <h3>Tecnólogo em Desenvolvimento Full-Stack <span>· Estácio</span></h3>
-                        <p>Projetos em Python, Java (POO, JDBC, Jakarta EE, sockets), JavaScript e bancos de dados relacionais.</p>
+                        <h3 data-i18n="exp.grad.h">Full-Stack Development <span>· Estácio</span></h3>
+                        <p data-i18n="exp.grad.p">Projects in Python, Java (OOP, JDBC, Jakarta EE, sockets), JavaScript and relational databases.</p>
                     </div>
                 </li>
                 <li class="linha__item revelar">
-                    <span class="linha__quando">Indústria</span>
+                    <span class="linha__quando" data-i18n="exp.ind">Industry</span>
                     <div>
-                        <h3>Usinagem CNC &amp; Automação</h3>
-                        <p>Execução e depuração de programas CNC em centros de usinagem, programação de CLPs
-                            e, ainda no ensino médio, um braço robótico em C++.</p>
+                        <h3 data-i18n="exp.ind.h">CNC Machining &amp; Automation</h3>
+                        <p data-i18n="exp.ind.p">Running and debugging CNC programs on machining centers, programming PLCs
+                            and, back in high school, building a robotic arm in C++.</p>
                     </div>
                 </li>
             </ol>
@@ -156,12 +162,12 @@
             </div>
             <div class="stack">
                 <div class="stack__grupo revelar">
-                    <h3>Arquitetura</h3>
-                    <ul><li>SaaS multi-tenant</li><li>ERP</li><li>Design de sistemas</li><li>APIs &amp; integrações</li><li>Escalabilidade</li></ul>
+                    <h3 data-i18n="st.arch">Architecture</h3>
+                    <ul data-i18n="st.arch.l"><li>Multi-tenant SaaS</li><li>ERP</li><li>System design</li><li>APIs &amp; integrations</li><li>Scalability</li></ul>
                 </div>
                 <div class="stack__grupo revelar">
-                    <h3>Inteligência Artificial</h3>
-                    <ul><li>LLMs &amp; agentes</li><li>MCP</li><li>RAG</li><li>Bancos vetoriais</li><li>Embeddings</li></ul>
+                    <h3 data-i18n="st.ai">Artificial Intelligence</h3>
+                    <ul data-i18n="st.ai.l"><li>LLMs &amp; agents</li><li>MCP</li><li>RAG</li><li>Vector databases</li><li>Embeddings</li></ul>
                 </div>
                 <div class="stack__grupo revelar">
                     <h3>Back-end</h3>
@@ -173,10 +179,10 @@
                 </div>
                 <div class="stack__grupo revelar">
                     <h3>Tooling &amp; Desktop</h3>
-                    <ul><li>VS Code Extensions</li><li>Tauri</li><li>Monaco Editor</li><li>Automação de workflows</li></ul>
+                    <ul data-i18n="st.tool.l"><li>VS Code Extensions</li><li>Tauri</li><li>Monaco Editor</li><li>Workflow automation</li></ul>
                 </div>
                 <div class="stack__grupo revelar">
-                    <h3>Versionamento</h3>
+                    <h3 data-i18n="st.vcs">Version Control</h3>
                     <ul><li>Git</li><li>GitHub</li><li>SVN</li></ul>
                 </div>
             </div>
@@ -186,45 +192,45 @@
         <section class="secao" id="projetos">
             <div class="secao__cabeca revelar">
                 <span class="secao__num">04</span>
-                <h2 class="secao__titulo">Projetos</h2>
+                <h2 class="secao__titulo" data-i18n="sec.projects">Projects</h2>
             </div>
 
             <article class="destaque revelar">
                 <a class="destaque__imagem" href="https://github.com/ricxJr/conflicts" target="_blank" rel="noopener">
-                    <img src="./assets/img/mergescope.jpg" alt="Interface do MergeScope com três painéis de diff" loading="lazy">
+                    <img src="./assets/img/mergescope.jpg" alt="MergeScope interface with three diff panels" data-i18n-alt="feat.alt" loading="lazy">
                 </a>
                 <div class="destaque__texto">
-                    <p class="rotulo">Projeto em destaque</p>
+                    <p class="rotulo" data-i18n="feat.label">Featured project</p>
                     <h3>MergeScope</h3>
-                    <p>Resolução visual de conflitos de merge no Git comparando cada lado com o ancestral comum.
-                        App desktop com diffs sincronizados, classificação de conflitos, aplicação automática de mudanças
-                        seguras e integração com <code>git mergetool</code>.</p>
+                    <p data-i18n="feat.p">Visual Git merge conflict resolution that compares each side against the common ancestor.
+                        A desktop app with synchronized diffs, conflict classification, automatic application of safe
+                        changes and <code>git mergetool</code> integration.</p>
                     <ul class="tags"><li>Tauri 2</li><li>React</li><li>TypeScript</li><li>Monaco</li></ul>
-                    <a class="link-seta" href="https://github.com/ricxJr/conflicts" target="_blank" rel="noopener">Ver repositório</a>
+                    <a class="link-seta" href="https://github.com/ricxJr/conflicts" target="_blank" rel="noopener" data-i18n="feat.link">View repository</a>
                 </div>
             </article>
 
-            <p class="grade__dica" aria-hidden="true">Deslize para ver mais</p>
+            <p class="grade__dica" aria-hidden="true" data-i18n="proj.hint">Swipe to see more</p>
             <div class="grade" id="gradeProjetos"></div>
             <div class="grade__pontos" id="pontosProjetos" aria-hidden="true"></div>
         </section>
 
         <!-- CONTATO -->
         <section class="contato" id="contato">
-            <p class="rotulo revelar">Contato</p>
-            <h2 class="contato__titulo revelar">Vamos construir<br><em>algo bem feito.</em></h2>
-            <p class="contato__texto revelar">Aberto a conversas sobre tecnologia, projetos e oportunidades.</p>
+            <p class="rotulo revelar" data-i18n="contact.label">Contact</p>
+            <h2 class="contato__titulo revelar" data-i18n="contact.title">Let's build<br><em>something remarkable.</em></h2>
+            <p class="contato__texto revelar" data-i18n="contact.text">Open to conversations about technology, projects and opportunities.</p>
             <div class="contato__links revelar">
                 <a href="https://www.linkedin.com/in/ricxjr" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="https://github.com/ricxJr" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://drive.google.com/drive/folders/1aiVKjE6eeR2KHjMo3IoDiliMJaKAk1oN?usp=drive_link" target="_blank" rel="noopener">Certificados</a>
+                <a href="https://drive.google.com/drive/folders/1aiVKjE6eeR2KHjMo3IoDiliMJaKAk1oN?usp=drive_link" target="_blank" rel="noopener" data-i18n="contact.certs">Certificates</a>
             </div>
         </section>
     </main>
 
     <footer class="rodape">
         <span>© <span id="ano"></span> Ricardo Junior</span>
-        <a href="#inicio">Voltar ao topo ↑</a>
+        <a href="#inicio" data-i18n="footer.top">Back to top ↑</a>
     </footer>
 
     <script src="./assets/js/main.js"></script>
