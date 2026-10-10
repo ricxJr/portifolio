@@ -97,14 +97,32 @@ const topo = document.getElementById("topo");
 const botaoMenu = document.querySelector(".topo__menu");
 botaoMenu.addEventListener("click", () => {
     const aberto = topo.classList.toggle("topo--aberto");
+    document.body.classList.toggle("travado", aberto);
     botaoMenu.setAttribute("aria-expanded", aberto);
+    botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
 });
-document.querySelectorAll(".topo__nav a").forEach(a =>
-    a.addEventListener("click", () => {
-        topo.classList.remove("topo--aberto");
-        botaoMenu.setAttribute("aria-expanded", "false");
-    })
-);
+const fecharMenu = () => {
+    topo.classList.remove("topo--aberto");
+    document.body.classList.remove("travado");
+    botaoMenu.setAttribute("aria-expanded", "false");
+    botaoMenu.setAttribute("aria-label", "Abrir menu");
+};
+document.querySelectorAll(".topo__nav a").forEach(a => a.addEventListener("click", fecharMenu));
+document.addEventListener("keydown", e => e.key === "Escape" && fecharMenu());
+window.matchMedia("(min-width: 861px)").addEventListener("change", e => e.matches && fecharMenu());
+
+// Indicadores do carrossel (mobile)
+const pontos = document.getElementById("pontosProjetos");
+pontos.innerHTML = projetos.map(() => "<span></span>").join("");
+const marcarPonto = () => {
+    const cartoes = grade.children;
+    if (!cartoes.length) return;
+    const passo = cartoes[0].offsetWidth + 14;
+    const indice = Math.min(cartoes.length - 1, Math.round(grade.scrollLeft / passo));
+    [...pontos.children].forEach((p, i) => p.classList.toggle("ativo", i === indice));
+};
+grade.addEventListener("scroll", marcarPonto, { passive: true });
+marcarPonto();
 
 // Cabeçalho compacto ao rolar
 const aoRolar = () => topo.classList.toggle("topo--rolado", window.scrollY > 24);
