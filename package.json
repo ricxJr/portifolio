@@ -1,0 +1,8 @@
+{
+  "name": "portifolio",
+  "private": true,
+  "description": "Portfólio de Ricardo Junior — site estático.",
+  "engines": {
+    "node": "24.x"
+  }
+}
